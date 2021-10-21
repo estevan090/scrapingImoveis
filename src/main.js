@@ -3,6 +3,8 @@
 const { url } = require('inspector');
 const puppeteer = require('puppeteer');
 const linkspg = require('./linkspg');
+const express = require("express")
+const app = express();
 
 const urlalvo = "https://sp.olx.com.br/regiao-de-sorocaba/regiao-de-sorocaba/imoveis/aluguel?pe=1000&sf=1";
 let detalhesImovel = [];
@@ -39,7 +41,9 @@ const main = async () =>{
    
     await browser.close();
 }
-
+app.get("/"), function (req, res){
+    res.send("teste")
+}
 main();
 
 

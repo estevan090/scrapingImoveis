@@ -44,6 +44,8 @@ const main = async () =>{
 app.get("/"), function (req, res){
     res.send("teste")
 }
+
+app.listen(process.env.PORT || 5000);
 main();
 
 
